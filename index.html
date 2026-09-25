@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+        }
+
+        .boas-vindas {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            padding: 50px 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .bv-texto {
+            flex: 1;
+            min-width: 260px;
+        }
+
+        .bv-tag {
+            background: #ede9fe;
+            color: #7c3aed;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .bv-texto h1 {
+            font-size: 1.9rem;
+            color: #1e293b;
+            margin: 12px 0;
+        }
+
+        .bv-texto p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .btn-primario {
+            padding: 12px 24px;
+            background: #a855f7;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .bv-imagem {
+            flex: 1;
+            min-width: 260px;
+        }
+
+        .bv-imagem img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        .precos { padding: 50px 20px; text-align: center; background: #f8fafc; }
+.precos h2 { color: #1e293b; font-size: 1.7rem; margin-bottom: 30px; }
+.precos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.plano {
+    background: white;
+    padding: 28px 22px;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    transition: 0.2s;
+    position: relative;
+}
+.plano.destaque {
+    border-color: #a855f7;
+    box-shadow: 0 12px 28px rgba(168,85,247,0.2);
+    transform: scale(1.03);
+}
+.badge {
+    position: absolute;
+    top: -12px; left: 50%;
+    transform: translateX(-50%);
+    background: #a855f7; color: white;
+    padding: 4px 14px; border-radius: 20px;
+    font-size: 0.65rem; font-weight: 800;
+    letter-spacing: 1px;
+}
+.plano h3 { color: #1e293b; margin-bottom: 12px; }
+.plano-preco { font-size: 2rem; font-weight: 800; color: #7c3aed; margin-bottom: 18px; }
+.plano-preco span { font-size: 0.9rem; color: #94a3b8; font-weight: 500; }
+.plano ul { list-style: none; text-align: left; margin-bottom: 20px; }
+.plano ul li { padding: 5px 0; color: #334155; font-size: 0.88rem; }
+.btn-plano {
+    width: 100%; padding: 11px;
+    background: #e2e8f0; color: #1e293b;
+    border: none; border-radius: 10px;
+    font-weight: 700; cursor: pointer;
+    font-family: inherit;
+}
+.btn-plano.destaque-btn { background: #a855f7; color: white; }
+.beneficios { padding: 50px 20px; text-align: center; }
+.beneficios h2 { color: #1e293b; font-size: 1.7rem; margin-bottom: 6px; }
+.subtitulo { color: #64748b; margin-bottom: 30px; }
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.beneficio {
+    background: white;
+    padding: 26px 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 14px;
+    transition: 0.2s;
+}
+.beneficio:hover { border-color: #a855f7; transform: translateY(-4px); }
+.beneficio-icone { font-size: 2rem; margin-bottom: 12px; }
+.beneficio h3 { color: #1e293b; margin-bottom: 6px; }
+.beneficio p { color: #64748b; font-size: 0.88rem; }
+    </style>
+</head>
+
+<body>
+    <section class="boas-vindas">
+        <div class="bv-texto">
+            <span class="bv-tag">BEM-VINDO</span>
+            <h1>Olá! Seja Bem-Vindo ao SCloudGaming 🎮</h1>
+            <p>Somos uma equipe apaixonada por disponibilizar plataformas de jogos em nuvem.</p>
+            <button class="btn-primario">Conheça nossos planos disponíveis</button>
+        </div>
+        <div class="bv-imagem">
+            <img src="https://images.pexels.com/photos/9069313/pexels-photo-9069313.jpeg" alt="Boas-vindas">
+        </div>
+    </section>
+    <script>
+    </script>
+    <section class="precos">
+        <h2>Planos e Preços</h2>
+        <div class="precos-grid">
+            <div class="plano">
+                <h3>Básico</h3>
+                <div class="plano-preco">R$ 19,99<span>/mês</span></div>
+                <ul>
+                    <li>✅ 20 jogos liberados</li>
+                    <li>✅ Cross-save</li>
+                    <li>❌ Suporte para mobile</li>
+                    <li>❌ Compatibilidade com conta steam, epic, etc
+                    <li>❌ Suporte ao modo multiplayer/online
+                    <li>❌ Suporte aos novos jogos em lançamento
+                </ul>
+                <button class="btn-plano">Assinar</button>
+            </div>
+            <div class="plano destaque">
+                <span class="badge">MAIS POPULAR</span>
+                <h3>Pro</h3>
+                <div class="plano-preco">R$ 59,90<span>/mês</span></div>
+                <ul>
+                    <li>✅ 75 jogos liberados</li>
+                    <li>✅ Cross-save</li>
+                    <li>✅ Suporte para mobile
+                    <li>✅ Compatibilidade com conta steam, epic, etc
+                    <li>❌ Suporte ao modo multiplayer/online
+                    <li>❌ Suporte aos novos jogos em lançamento
+                    </li>
+                </ul>
+                <button class="btn-plano destaque-btn">Assinar</button>
+            </div>
+            <div class="plano">
+                <h3>Premium</h3>
+                <div class="empresa">R$ 99,99<span>/mês</span></div>
+                <ul>
+                    <li>✅ +150 jogos</li>
+                    <li>✅ Cross-save</li>
+                    <li>✅ Suporte para mobile</li>
+                    <li>✅ Compatibilidade com conta steam, epic, etc.</li>
+                    <li>✅ Suporte ao modo multiplayer/online
+                    <li>✅ Suporte aos novos jogos em lançamento
+                </ul>
+                <button class="btn-plano">Assinar</button>
+            </div>
+        </div>
+    </section>
+    <section class="beneficios">
+        <h2>Por que escolher a gente?</h2>
+        <p class="subtitulo">Cada detalhe pensado para você</p>
+        <div class="beneficios-grid">
+            <div class="beneficio">
+                <div class="beneficio-icone">⚡</div>
+                <h3>Melhor suporte</h3>
+                <p>Suporte ativo durante 24 horas</p>
+            </div>
+            <div class="beneficio">
+                <div class="beneficio-icone">🛡️</div>
+                <h3>Seguro</h3>
+                <p>Dados protegidos e criptografados</p>
+            </div>
+            <div class="beneficio">
+                <div class="beneficio-icone">💎</div>
+                <h3>Premium</h3>
+                <p>Qualidade em cada detalhe</p>
+            </div>
+            <div class="beneficio">
+                <div class="beneficio-icone">💲</div>
+                <h3>Melhor custo-benefício</h3>
+                <p>Os melhores preços e qualidade de serviço</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
